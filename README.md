@@ -6,7 +6,7 @@ File Type - parquet files
 
 Kaggle Parquet Files --> Python Ingestion script using Kaggle API --> PostgreSQL Staging Database --> Trim usuable columns to Fact Tables --> Create a Star Schema
 
-| Strategy / Setup | Query Type | Storage Size | Latency (sec) | Speedup |
+| Strategy / Setup | Query Type | Est Storage Size | Est Latency (sec) | Est Speedup |
 | :--- | :--- | :--- | :--- | :--- |
 | **Stage 0:** Heap Scan (No Indexes) | 24-hr Threat Vol. Aggregation | 7.8 GB | `38.420 s` | Baseline |
 | **Stage 1:** Standard B-Tree Index | Single IP Lookup (`src_ip`) | 11.2 GB (+3.4GB idx) | `0.340 s` | 113x |
